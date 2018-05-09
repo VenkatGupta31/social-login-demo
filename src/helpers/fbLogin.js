@@ -30,9 +30,9 @@ const statusChangeCallback = (response) => {
 
 const fetchDataFacebook = () => {
     window.FB.api('/me', function(user) {
-        browserHistory.push('/success');
+        browserHistory.push('/Success');
         sessionStorage.setItem('User', user.name);
-        sessionStorage.setItem('access', true);
+        sessionStorage.setItem('Access', true);
         alert( 'Successful login for: ' + user.name );
     });
 }

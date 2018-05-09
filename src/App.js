@@ -35,7 +35,7 @@ class App extends React.Component{
                         <Home>
                             <br/>
                             <Route exact path="/" component={Login} />
-                            <Route path="/success" render={ props => ( <Success {...this.state} />) } /> 
+                            <Route path="/Success" render={ props => ( <Success {...this.state} />) } /> 
                         </Home>
                 </BrowserRouter>
         );

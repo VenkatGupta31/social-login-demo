@@ -1,4 +1,6 @@
-    export const googleLogin = () => {
+import { browserHistory } from 'react-router';
+
+export const googleLogin = () => {
         let response = null;
         window.gapi.auth.signIn({
             callback: function(authResponse) {
@@ -36,6 +38,9 @@
                 console.log('error-token', e.message);
                 return
             } else if (e.id) {
+                browserHistory.push('/Success');
+                sessionStorage.setItem('User', e.url);
+                sessionStorage.setItem('Access', true);
                 alert("Successfull login from google : "+ e.displayName )
             }
         }.bind(this));
